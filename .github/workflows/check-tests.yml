@@ -1,0 +1,23 @@
+name: Check tests
+description: reminds for checking for tests
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  remind-about-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+      
+      - name: install packages
+        run: npm install
+      
+      - name: run tests
+        run: npm test
