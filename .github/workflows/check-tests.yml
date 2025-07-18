@@ -1,0 +1,14 @@
+name: Check tests
+description: reminds for checking for tests
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  remind-about-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: make a reminder
+        run: echo Hey! Check your tests before requesting a PR review... please!
