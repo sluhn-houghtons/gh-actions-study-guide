@@ -1,0 +1,12 @@
+name: Welcome
+description: to welcome people to the repo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome the person
+        run: echo Welcome to my study guide
