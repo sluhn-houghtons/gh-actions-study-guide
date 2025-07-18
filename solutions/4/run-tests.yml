@@ -1,5 +1,5 @@
-name: Check tests
-description: reminds for checking for tests
+name: Run tests
+description: runs the tests
 
 on:
   pull_request:
